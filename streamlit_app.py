@@ -29,4 +29,4 @@ if uploaded_file is not None:
     knn = KNeighborsClassifier()
     knn.fit(X_train, y_train)
     y_test_pred = knn.predict(X_test)
-    test_and_print_metrics(y_test, y_test_pred, 'binary', knn.classes_)
+    test_and_print_metrics(y_test, y_test_pred, 'weighted', knn.classes_)
