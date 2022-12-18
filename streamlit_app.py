@@ -14,7 +14,7 @@ def test_and_print_metrics(y, y_pred, average, labels):
     conf = mat.confusion_matrix(y, y_pred)
     # use confusion matrix display from sklearn
     disp = mat.ConfusionMatrixDisplay(confusion_matrix=conf, display_labels=labels)
-    st.pyplot(disp.figure_)
+    st.pyplot(disp.plot().figure_)
 
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
